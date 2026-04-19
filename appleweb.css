@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #EAEAEA;
+}
+
+.container {
+    width: 1110px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+    background: white;
+    padding: 20px 0;
+}
+
+.header__wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__icons {
+    display: flex;
+    gap: 15px;
+}
+
+.icon {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: #FFA542;
+    color: white;
+    font-size: 10px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SELECT */
+.select-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 40px;
+}
+
+.select-wrapper select {
+    width: 320px;
+    padding: 14px;
+    border-radius: 14px;
+    border: none;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.card__img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+}
+
+.card__top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.new-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFA542;
+}
+
+.old-price {
+    font-size: 12px;
+    color: #B0B0B0;
+    text-decoration: line-through;
+}
+
+/* FOOTER */
+.footer {
+    background: white;
+    margin-top: 60px;
+    padding: 30px 0;
+}
+
+.footer__wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__links a {
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+}
+
+.card__actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* ОБЩИЙ СТИЛЬ КНОПОК */
+.buy-btn,
+.fav-btn {
+    border: none;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.2s;
+}
+
+/* КНОПКА КУПИТЬ */
+.buy-btn {
+    background: #FFA542;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.buy-btn:hover {
+    background: #ff8f1f;
+    transform: scale(1.05);
+}
+
+/* ИЗБРАННОЕ (❤) */
+.fav-btn {
+    background: #f5f5f5;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    font-size: 16px;
+    opacity: 0.6;
+}
+
+/* активное избранное */
+.fav-btn.active {
+    background: #ffe3e3;
+    color: red;
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* hover эффект */
+.fav-btn:hover {
+    transform: scale(1.1);
+}
+
+/* ===== TOAST УВЕДОМЛЕНИЕ ===== */
+#toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: rgba(20, 20, 20, 0.95);
+    color: white;
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-size: 14px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* появление */
+#toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* типы сообщений */
+#toast.success {
+    background: #2ecc71;
+}
+
+#toast.error {
+    background: #e74c3c;
+}
+
+.fav-btn {
+    transition: 0.2s;
+}
+
+.fav-btn.active {
+    color: red;
+    transform: scale(1.2);
+}

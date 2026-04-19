@@ -1,0 +1,65 @@
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal__content {
+    background: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    width: 350px;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.modal__product {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.modal__product img {
+    width: 70px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.order-btn {
+    background: black;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.order-btn:hover {
+    opacity: 0.9;
+}

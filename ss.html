@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Избранное - QPICK</title>
+    <link rel="stylesheet" href="favorites.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container header__wrap">
+        <div class="logo">QPICK</div>
+
+        <div class="header__icons">
+            <div class="icon">
+                <a href="ss.html">❤</a>
+                <span id="favCount" class="badge">0</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <h2 class="title">Избранное</h2>
+
+    <div id="favoritesList" class="grid"></div>
+
+    <button class="back-btn" onclick="goHome()">← На главную</button>
+</main>
+
+<script src="favorites.js"></script>
+</body>
+</html>
